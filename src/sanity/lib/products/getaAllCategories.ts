@@ -14,7 +14,7 @@ export const getaAllCategories = async () => {
       query: ALL_CATEGORIES_QUERY,
     });
     // Return the list of the categories, or an empty list if none are found
-    return categories || [];
+    return categories.data || [];
   } catch (error) {
     console.error("Error fetching all categories", error);
     return [];

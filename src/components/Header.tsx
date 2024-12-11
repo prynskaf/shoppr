@@ -4,10 +4,14 @@ import Link from "next/link"
 import Form from 'next/form';
 import { TrolleyIcon } from "@sanity/icons";
 import { PackageIcon } from "lucide-react";
+import useBasketStore from "@/store/store";
 
 const Header = () => {
     const { user } = useUser()
-
+    const itemCount = useBasketStore((state) => 
+        state.items.reduce((total, item) => total + item.quantity, 0)
+    );
+    
 
     const createClerkPasskey = async () => {
         try {
@@ -53,6 +57,10 @@ const Header = () => {
                     >
                         <TrolleyIcon className='w-6 h-6' />
                         {/* span item count global state is implemte */}
+                        <span className='absolute -top-2 -right-2 bg-red-500 text-white 
+                        rounded-full w-5 h-5 flex  items-center justify-center text-xs'>
+                               {itemCount}
+                        </span>
                         <span>My Basket</span>
                     </Link>
 

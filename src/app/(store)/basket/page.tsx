@@ -7,14 +7,7 @@ import AddtoBasketButton from '@/components/AddtoBasketButton';
 import Image from 'next/image';
 import { imageUrl } from '@/lib/imageUrl';
 import Loader from '@/components/Loader';
-
-
-export type Metadata = {
-    orderNumber: string;
-    customerName: string;
-    customerEmail: string;
-    clerkUserId: string;
-}
+import { createCheckoutSession, Metadata } from '../../../../actions/createCheckoutSession';
 
 const BasketPage = () => {
     const groupedItems = useBasketStore((state) => state.getGroupedItems());
@@ -59,7 +52,10 @@ const BasketPage = () => {
                 customerEmail: user?.emailAddresses[0].emailAddress ?? 'unknown',
                 clerkUserId: user!.id
             }
-            const checkout = await createCheckoutSession(groupedItems, metadata)
+            const checkoutUrl = await createCheckoutSession(groupedItems, metadata)
+            if(checkoutUrl) {
+                window.location.href = checkoutUrl
+            }
         } catch (error) {
             console.error('Error creating checkout session', error);
         }finally{

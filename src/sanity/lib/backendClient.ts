@@ -5,7 +5,7 @@ import { apiVersion, dataset, projectId } from "../env";
 export const backendClient = createClient({
   projectId,
   dataset,
-  useCdn: true,
+  useCdn: false,
   apiVersion,
   token: process.env.SANITY_API_TOKEN,
 });

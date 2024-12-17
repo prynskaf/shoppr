@@ -28,8 +28,8 @@ export async function POST(req: NextRequest) {
 
     
 
-    // const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
-    const webhookSecret =  "whsec_ddd3cee7356fe1f9696fb502abef2d088d5a54bb45a8cf4f68559186830367f2"
+    const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+    
     if (!webhookSecret) {
         console.log("Stripe webhook secret is not set");
         return NextResponse.json({ error: "invalid signature" }, { status: 400 });

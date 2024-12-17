@@ -1,4 +1,4 @@
-// /home/princekaf/shopper/src/app/middleware.ts
+
 import { NextResponse, NextRequest } from "next/server";
 
 export function middleware(req: NextRequest) {

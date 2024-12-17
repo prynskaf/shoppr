@@ -406,7 +406,7 @@ export type PRODUCT_BY_ID_SLUG_QUERYResult = {
   stock?: number;
 } | null;
 
-// Source: ./src/sanity/lib/products/getProductsByCategory.ts
+// Source: ./src/sanity/lib/products/getProductsByCategory.tsx
 // Variable: PRODUCT_BY_CATEGORY_QUERY
 // Query: *[        _type == "product" &&        references(*[_type == "category" && slug.current == $categorySlug]._id)      ] | order(name asc)
 export type PRODUCT_BY_CATEGORY_QUERYResult = Array<{

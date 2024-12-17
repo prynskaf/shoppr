@@ -1,3 +1,4 @@
+// /home/princekaf/shopper/src/lib/stripe.ts
 import Stripe from 'stripe'
 
 

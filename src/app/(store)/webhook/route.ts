@@ -1,4 +1,3 @@
-// /home/princekaf/shopper/src/app/(store)/webhook/route.ts
 import { NextRequest, NextResponse } from "next/server";
 import { headers } from "next/headers";
 import Stripe from "stripe";
@@ -29,7 +28,7 @@ export async function POST(req: NextRequest) {
     
 
     const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
-    
+
     if (!webhookSecret) {
         console.log("Stripe webhook secret is not set");
         return NextResponse.json({ error: "invalid signature" }, { status: 400 });

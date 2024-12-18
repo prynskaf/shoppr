@@ -34,6 +34,7 @@ const Header = () => {
                   hover:opacity-50 
                   cursor-pointer
                  mx-auto sm:mx-0"
+                    aria-label="Home"
                 >
                     Shopr
                 </Link>
@@ -46,6 +47,7 @@ const Header = () => {
                         className="bg-background text-foreground px-4 py-2 rounded 
               focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 
               border  w-full max-w-4xl"
+                        aria-label="Search for products"
                     />
                 </Form>
                 {/* basket */}
@@ -54,6 +56,7 @@ const Header = () => {
                         className='flex-1 relative flex justify-center sm:justify-start
                 sm:flex-none items-center space-x-2 bg-blue-500 hover:bg-blue-700
                 text-white font-bold py-2 px-4 rounded'
+                        aria-label="Basket"
                     >
                         <TrolleyIcon className='w-6 h-6' />
                         {/* span item count global state is implemte */}

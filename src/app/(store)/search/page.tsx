@@ -3,9 +3,9 @@ import { searchProductByName } from '@/sanity/lib/products/searchProductByName';
 import React from 'react';
 
 interface SearchPageProps {
-    searchParams: {
+    searchParams: Promise<{
         query: string;
-    };
+    }>;
 }
 
 const SearchPage = async ({ searchParams }: SearchPageProps) => {

@@ -43,7 +43,7 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
         //     : process.env.NEXT_PUBLIC_BASE_URL;
 
             const baseUrl = process.env.VERCEL_ENV === 'production' 
-            ? `https://shopper-ccglq8f44-prince-kaf.vercel.app` 
+            ? `https://shopper-eta-five.vercel.app` 
             : process.env.NEXT_PUBLIC_BASE_URL;
 
         const session = await stripe.checkout.sessions.create({

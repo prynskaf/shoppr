@@ -94,7 +94,7 @@ const Header = () => {
                             <button
                                 onClick={createClerkPasskey}
                                 className='bg-white hover:bg-blue-700 hover:text-white animate-pluse text-blue-500 font-bold py-2
-                             px-4 rounded border-blue-300 border'>
+                             px-4 rounded border-blue-300 border  hidden '>
                                 Create passKey
                             </button>
                         )}

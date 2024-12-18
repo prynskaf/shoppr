@@ -38,8 +38,12 @@ export async function createCheckoutSession(items: GroupedBasketItem[], metadata
 
         const isNewCustomer = !customerId;
 
-        const baseUrl = process.env.VERCEL_ENV === 'production' 
-            ? `https://${process.env.VERCEL_URL}` 
+        // const baseUrl = process.env.VERCEL_ENV === 'production' 
+        //     ? `https://${process.env.VERCEL_URL}` 
+        //     : process.env.NEXT_PUBLIC_BASE_URL;
+
+            const baseUrl = process.env.VERCEL_ENV === 'production' 
+            ? `https://shopper-ccglq8f44-prince-kaf.vercel.app` 
             : process.env.NEXT_PUBLIC_BASE_URL;
 
         const session = await stripe.checkout.sessions.create({

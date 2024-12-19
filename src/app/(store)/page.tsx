@@ -20,7 +20,7 @@ export default async function Home() {
       <BlackFridayBanner />
 
       {/* render all the products */}
-      <div className="flex flex-col items-center justify-top min-h-screen bg-gray-100 P-4 ">
+      <div className="flex flex-col items-center justify-top min-h-screen bg-gray-100 p-4 ">
         <ProductsView products={products} categories={categories} />
       </div>
     </div>

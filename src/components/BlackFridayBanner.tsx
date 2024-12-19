@@ -16,7 +16,7 @@ const BlackFridayBanner = async () => {
                     <h2 className='text-3xl sm:text-5xl font-extrabold text-left mb-4'>{sale.title}</h2>
                     <p className='text-left text-xl sm:text-3xl font-semibold mb-6'>{sale.description}</p>
                     <div
-                        className='bg-white text-black py-4 px-6 rounded-full shadow-md transform hover:scale-105 transition duration-300'>
+                        className='bg-white text-black py-4 px-6 rounded-full lg:max-w-[35%] shadow-md transform hover:scale-105 transition duration-300'>
                         <span className='font-bold text-base sm:text-xl'>Use code: </span>
                         <span className="text-red-600 font-bold">{sale.couponCode}</span>
                         <span className="ml-2 font-bold text-base sm:text-xl">for {sale.discountAmount}% OFF</span>
